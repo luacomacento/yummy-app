@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import chefToque from '../images/chefToque.svg';
-import recipesApp from '../images/recipesApp.svg';
+import yummy from '../images/yummy.svg';
 import '../index.css';
 import '../styles/Login.css';
 
@@ -37,8 +36,12 @@ function Login() {
   return (
     <div className="Login">
       <div className="logo-div">
-        <img width="48" height="42" src={ chefToque } alt="Chef Toque" />
-        <img src={ recipesApp } alt="Recipes App" />
+        <img
+          src={ yummy }
+          width="203"
+          height="116"
+          alt="yummy - stop searching, start cooking"
+        />
       </div>
       <form className="login-form">
         <label htmlFor="email">
