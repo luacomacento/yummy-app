@@ -24,7 +24,16 @@ yarn-error.log*
 
 .vscode
 
-
+cypress/
+cypress.json
 cypress/screenshots/
 cypress/videos/
 cypress/reports
+
+trybe.yml
+pull-request-para-branch-do-grupo.png
+describe-only.png
+init.txt
+only-all-green
+README.md
+
