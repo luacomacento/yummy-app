@@ -4,10 +4,13 @@ import Slider from 'react-slick';
 import '../styles/RecommendationSection.css';
 
 function RecommendationsSection({ recommendations }) {
+  const noOfSlidesOnDesktop = 6;
+
   const sliderSettings = {
     dots: true,
     infinite: false,
-    slidesToShow: 2,
+    slidesToShow: window.matchMedia('(min-width: 768px)').matches
+      ? noOfSlidesOnDesktop : 2,
     slidesToScroll: 2,
     arrows: false,
   };

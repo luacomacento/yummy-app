@@ -18,24 +18,22 @@ function StartRecipeBtn() {
   };
 
   return (
-    <div>
-      {!doneRecipes.some((item) => item.id === id) && (
-        <div className="start-recipe-container">
-          <button
-            type="button"
-            className="start-recipe-btn"
-            data-testid="start-recipe-btn"
-            onClick={ handleStartRecipe }
-          >
-            {
-              inProgressIds.some((item) => item === id)
-                ? 'Continue Recipe'
-                : 'Start Recipe'
-            }
-          </button>
-        </div>
-      )}
-    </div>
+    !doneRecipes.some((item) => item.id === id) && (
+      <div className="start-recipe-container">
+        <button
+          type="button"
+          className="start-recipe-btn"
+          data-testid="start-recipe-btn"
+          onClick={ handleStartRecipe }
+        >
+          {
+            inProgressIds.some((item) => item === id)
+              ? 'Continue Recipe'
+              : 'Start Recipe'
+          }
+        </button>
+      </div>
+    )
   );
 }
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { FaAngleLeft } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -19,7 +19,7 @@ function Details({ type }) {
   const [isToastVisible, setToastVisibility] = useState(false);
   const recipe = useFetchRecipe(type, id);
   const history = useHistory();
-  const doneRecipes = useSelector((state) => state.savedRecipes.doneRecipes);
+  // const doneRecipes = useSelector((state) => state.savedRecipes.doneRecipes);
 
   useEffect(() => {
     const fetchRecommendations = async () => {
@@ -55,7 +55,7 @@ function Details({ type }) {
   };
 
   return (
-    <div>
+    <div className="details-main">
       <div className="top-overlay" />
       <FaAngleLeft
         className="go-back"
@@ -69,12 +69,7 @@ function Details({ type }) {
         alt=""
         src={ recipe[`str${type}Thumb`] }
       />
-      <div
-        className={
-          `${!doneRecipes.some((item) => item.id === id)
-            ? 'add-padding' : ''} details-container`
-        }
-      >
+      <div className="details-container">
         <div className="details-header">
           <div>
             <h2 data-testid="recipe-title">{recipe[`str${type}`]}</h2>
@@ -104,6 +99,8 @@ function Details({ type }) {
               data-testid="video"
               title={ recipe[`str${type}`] }
               width="100%"
+              height={ window.matchMedia('(min-width: 768px)').matches
+                ? '400px' : '' }
               src={ recipe.strYoutube.replace('watch?v=', 'embed/') }
             />
           </>

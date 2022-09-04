@@ -207,8 +207,8 @@
 @media screen and ( min-width : 768px ) {
 
   .recipe-card {
-    flex-basis: calc(25% - 20px);
+    flex-basis: calc(16.6% - 20px);
     flex-grow: 1;
-    max-width: calc(25% - 10px);
+    max-width: calc(16.6% - 10px);
   }
 }

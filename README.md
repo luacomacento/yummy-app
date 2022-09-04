@@ -15,6 +15,8 @@
   <li>React.js</li>
   <li>Redux</li>
   <li>CSS3</li>
+  <li>Jest</li>
+  <li>React Testing Library</li>
 </ul>
 
 ## Made by:

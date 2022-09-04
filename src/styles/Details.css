@@ -1,15 +1,19 @@
+.details-main {
+  position: relative;
+}
+
 .details-container {
   background-color: white;
   border-radius: 16px 16px 0 0;
   margin-top: -16px;
   padding: 24px 20px 20px;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
-.add-padding {
+/* .add-padding {
   padding-bottom: 84px;
-}
+} */
 
 .details-container li {
   margin-left: 16px;

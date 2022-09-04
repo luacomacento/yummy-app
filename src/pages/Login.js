@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import yummy from '../images/yummy.svg';
 import '../index.css';
@@ -32,6 +32,15 @@ function Login() {
     localStorage.setItem('user', JSON.stringify({ email }));
     setLogin(true);
   };
+
+  useEffect(() => {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      global.alert(
+        `Essa página é melhor visualizada em dispositivos móveis.
+        \nClique para continuar mesmo assim.`,
+      );
+    }
+  }, []);
 
   return (
     <div className="Login">
